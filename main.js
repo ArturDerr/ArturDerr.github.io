@@ -236,7 +236,7 @@ function smoothScroll() {
 smoothScroll();
 
 let headerLastScroll = window.scrollY || 0;
-let isHeaderScrolled = false;
+let headerLastState = null; 
 
 function handleHeader() {
   if (!header) return;
@@ -254,28 +254,32 @@ function handleHeader() {
     }
   }
 
-  if (isHeaderScrolled !== shouldBeScrolled || open) {
-    header.classList.toggle("bg-white", shouldBeScrolled || open);
-    header.classList.toggle("bg-transparent", !shouldBeScrolled && !open);
-    header.classList.toggle("text-black", shouldBeScrolled || open);
-    header.classList.toggle("text-white", !shouldBeScrolled && !open);
+  const currentHeaderState = `${shouldBeScrolled}-${open}`;
 
-    const subtitle = header.querySelector(
-      "a.text-white\\/40, a.text-black\\/40",
-    );
+  if (currentHeaderState !== headerLastState) {
+    
+    header.classList.toggle("bg-white", shouldBeScrolled && !open);
+    header.classList.toggle("bg-transparent", !shouldBeScrolled || open);
+    
+    header.classList.toggle("text-black", shouldBeScrolled && !open);
+    header.classList.toggle("text-white", !shouldBeScrolled || open);
+
+    const subtitle = header.querySelector("a.text-white\\/40, a.text-black\\/40");
     if (subtitle) {
-      subtitle.classList.toggle("text-black/40", shouldBeScrolled || open);
-      subtitle.classList.toggle("text-white/40", !shouldBeScrolled && !open);
+      subtitle.classList.toggle("text-black/40", shouldBeScrolled && !open);
+      subtitle.classList.toggle("text-white/40", !shouldBeScrolled || open);
     }
 
     document.querySelectorAll("#burger .line").forEach((line) => {
-      const shouldBeBlack = shouldBeScrolled && !open;
-      const shouldBeWhite = !shouldBeScrolled || open;
+      const shouldBeWhite = open || !shouldBeScrolled; 
+      
+      const shouldBeBlack = !open && shouldBeScrolled;
+      
       line.classList.toggle("bg-black", shouldBeBlack);
       line.classList.toggle("bg-white", shouldBeWhite);
     });
 
-    isHeaderScrolled = shouldBeScrolled;
+    headerLastState = currentHeaderState;
   }
 
   headerLastScroll = current;
