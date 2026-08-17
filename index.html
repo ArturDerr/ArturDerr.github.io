@@ -1,285 +1,506 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artur Derr</title>
-  <link rel="preload" as="image" href="../img/case1.png">
-  <link rel="preload" as="image" href="../img/case2.png">
-  <link rel="preload" as="image" href="../img/case3.png">
-  <link rel="icon" href="./img/favicon.png" />
-  <script src="./main.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./main.css">
-</head>
-<body class="font-sf-regular">
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 font-sf-regular transition-color duration-300 text-white">
-    <div class="px-[18px] flex items-center py-[15px] justify-between relative">
-      <div class="flex flex-row justify-between items-center gap-16">
-        <a href="#" class="text-[17px]">Artur Derr ®</a>
-        <div class="flex flex-col hidden xl:flex">
-          <a class="text-[17px] text-white/40">Frontend-разработчик & UI/UX-designer</a>
-        </div>
-      </div>
-      <nav class="hidden md:flex gap-8">
-        <a href="#about" class="cursor-hover text-[17px] transition-color duration-200 hover:text-white/80">Обо мне</a>
-        <a href="#skills" class="cursor-hover text-[17px] transition-color duration-200 hover:text-white/80">Опыт</a>
-        <a href="#achievements" class="cursor-hover text-[17px] transition-color duration-200 hover:text-white/80">Навыки</a>
-        <a href="#cases" class="cursor-hover text-[17px] transition-color duration-200 hover:text-white/80">Кейсы</a>
-      </nav>
-      <div class="hidden md:flex">
-        <a href="#about" class="text-[17px] underline transition-color duration-200 cursor-hover hover:text-white/80">Контакты</a>
-      </div>
-      <button id="burger" class="relative z-[60] w-12 h-5 flex items-center justify-center md:hidden">
-        <span class="line line-1 z-1000 bg-white"></span>
-        <span class="line line-2 z-1000 bg-white"></span>
-      </button>
-      <div id="mobileMenu" class="fixed inset-0 h-screen bg-black text-white opacity-0 pointer-events-none transition-opacity duration-300 md:hidden">
-        <div class="flex flex-col h-full px-[18px] py-[18px] justify-between">
-          <div class="flex flex-col gap-4 text-[40px] leading-none">
-            <a href="#about" class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40">ОБО МНЕ</a>
-            <a href="#skills" class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40">ОПЫТ</a>
-            <a href="#achievements" class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40">НАВЫКИ</a>
-            <a href="#cases" class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40">КЕЙСЫ</a>
-          </div>
-          <div class="flex gap-6 text-[16px]">
-            <a href="https://github.com/ArturDerr" class="text-[16px] underline transition-all duration-200 hover:text-white/40" target="_blank">GitHub</a>
-            <a href="https://www.behance.net/artur_derr" class="text-[16px] underline transition-all duration-200 hover:text-white/40" target="_blank">Behance</a>
-            <a href="https://t.me/artur_derr" class="text-[16px] underline transition-all duration-200 hover:text-white/40" target="_blank">Telegram</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artur Derr</title>
+    <link rel="preload" as="image" href="../img/case1.png" />
+    <link rel="preload" as="image" href="../img/case2.png" />
+    <link rel="preload" as="image" href="../img/case3.png" />
+    <link rel="icon" href="./img/favicon.png" />
+    <script src="./main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body class="font-sf-regular">
+    <header
+      id="header"
+      class="fixed top-0 left-0 right-0 z-50 font-sf-regular transition-color duration-300 text-white"
+    >
+      <div
+        class="px-[18px] flex items-center py-[15px] justify-between relative"
+      >
+        <div class="flex flex-row justify-between items-center gap-16">
+          <a href="#" class="text-[17px]">Artur Derr ®</a>
+          <div class="flex flex-col hidden xl:flex">
+            <a class="text-[17px] text-white/40"
+              >Frontend-разработчик & UI/UX-designer</a
+            >
           </div>
         </div>
-      </div>
-    </div>
-  </header>
-  <div id="" class="bg-[#141414] h-[475px] w-full relative overflow-hidden">
-    <img src="./img/vector.png" alt="" class="absolute bottom-[-10px] w-1000 overflow-hidden xl:bottom-[-90px] w-full h-1500 pointer-events-none select-none" />
-    <div class="relative w-full h-full">
-      <div class="flex justify-between items-end h-full px-4 py-6 xl:px-7 xl:py-8">
-        <p class="text-white text-[54px] xl:text-[61px] leading-[60px]">
-          Артур Дерр
-        </p>
-        <div class="hidden md:flex flex-col text-end gap-1">
-          <a href="https://github.com/ArturDerr" class="cursor-hover text-[16px] transition-color duration-200 hover:text-white/80 text-white underline" target="_blank">GitHub</a>
-          <a href="https://www.behance.net/artur_derr" class="cursor-hover text-[16px] transition-color duration-200 hover:text-white/80 text-white underline" target="_blank">Behance</a>
-          <a href="https://t.me/artur_derr" class="cursor-hover text-[16px] transition-color duration-200 hover:text-white/80 underline text-white " target="_blank">Telegram</a>
+        <nav class="hidden md:flex gap-8">
+          <a
+            href="#about"
+            class="cursor-hover text-[17px] transition-color duration-200"
+            >Обо мне</a
+          >
+          <a
+            href="#experience"
+            class="cursor-hover text-[17px] transition-color duration-200"
+            >Опыт</a
+          >
+          <a
+            href="#education"
+            class="cursor-hover text-[17px] transition-color duration-200"
+            >Образование</a
+          >
+          <a
+            href="#skills"
+            class="cursor-hover text-[17px] transition-color duration-200"
+            >Навыки</a
+          >
+        </nav>
+        <div class="hidden md:flex">
+          <a
+            href="#about"
+            class="text-[17px] underline transition-color duration-200 cursor-hover"
+            >Контакты</a
+          >
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="w-full bg-white p-4 xl:p-7">
-    <section id="about" class="reveal-text mt-10 mb-40 flex-col xl:flex-row flex gap-30 border-t py-3 border-black/14 relative">
-      <div class="shrink-0">
-        <div class="sticky top-[60px]">
-          <div class="flex items-center">
-            <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
-            <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
-              Обо мне
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="flex-1 mt-20 xl:mt-0 pt-3 xl:pl-[260px] 2xl:pl-[720px]">
-        <div class="flex flex-col gap-14">
-          <img src="./img/img.png" class="w-[44px] h-[44px]" />
-          <div class="flex flex-col gap-8 xl:gap-6">
-            <p class="font-sf-regular text-[24px] md:text-[26px] text-black leading-8">
-              Привет, я Frontend-разработчик и UI/UX-дизайнер. Создаю современные интерфейсы и веб-приложения,
-              продумываю пользовательский опыт и реализую его в коде.
-            </p>
-            <a href="https://t.me/artur_derr" target="_blank" class="cursor-hover text-[16px] underline cursor-pointer transition-color duration-200 hover:text-black/80 text-black">
-              Написать мне
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="reveal-text mt-10 mb-40 flex-col xl:flex-row flex gap-30 border-t py-3 border-black/14 relative">
-      <div class="shrink-0 mr-5">
-        <div class="sticky top-[60px]">
-          <div class="flex items-center">
-            <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
-            <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
-              Опыт
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="flex-1 mt-20 xl:mt-0 xl:pl-[260px] 2xl:pl-[720px]">
-        <div class='mt-3 left-auto flex-1'>
-          <div class='flex-col xl:flex-row flex justify-between gap-auto'>
-            <p class='font-sf-regular text-[24px] md:text-[26px] mr-auto text-black leading-8'>Т-Академия</p>
-            <p class='font-sf-regular text-[16px] mt-6 md:mt-0 md:text-[18px] ml-auto text-black leading-6'>Сейчас обучаюсь в Т-Академии на frontend-разработчика,<br class='hidden md:flex'/> углубляю знания в веб-разработке и интерфейсах.</p>
-          </div>
-          <div class='border-b mt-20 w-full border-black/14'>
-            <p class='font-sf-regular w-full text-[14px] mb-3 text-black/40'>/достижения</p>
-          </div>
-          <div class='flex flex-row justify-between gap-auto w-full py-4'>
-            <p class='font-sf-regular text-[16px] md:text-[18px] text-black leading-6'>Всероссийский кейс-чемпионат Deadline</p>
-            <p class='font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6'>Призер</p>
-          </div>
-          <div class='border-t flex flex-row justify-between gap-auto w-full border-black/14 py-4'>
-            <p class='font-sf-regular text-[16px] md:text-[18px] text-black leading-6'>Всероссийский хакатон TerraLink CodeFest</p>
-            <p class='font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6'>Победитель</p>
-          </div>
-          <div class='border-t flex flex-row justify-between gap-auto w-full border-black/14 py-4'>
-            <p class='font-sf-regular text-[16px] md:text-[18px] text-black leading-6'>Всероссийский хакатон Hack iN Home</p>
-            <p class='font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6'>Победитель</p>
-          </div>
-          <div class='border-t flex flex-row justify-between gap-auto w-full border-black/14 py-4'>
-            <p class='font-sf-regular text-[16px] md:text-[18px] text-black leading-6'>Акселератор технологических проектов Технолидеры Будущего</p>
-            <p class='font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6'>Призер</p>
-          </div>
-          <div class='border-y flex flex-row justify-between gap-auto w-full border-black/14 py-4'>
-            <p class='font-sf-regular text-[16px] md:text-[18px] text-black leading-6'>Всероссийский хакатон The Genius Hack</p>
-            <p class='font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6'>Эксперт</p>
-          </div>
-        </div>
-      </div>  
-    </section>
-    <section class="reveal-text mt-10 mb-40 flex-col xl:flex-row flex gap-30 border-t py-3 border-black/14 relative">
-      <div class="shrink-0 mr-5">
-        <div class="sticky top-[60px]">
-          <div class="flex items-center">
-            <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
-            <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
-              Навыки
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="flex-1 mt-20 xl:mt-0 xl:pl-[260px] 2xl:pl-[700px]">
-        <div class="border-b border-white/14 skill-item" data-skill="frontend">
-          <button class="cursor-hover  w-full flex cursor-pointer items-center justify-between pt-1.5 text-left skill-toggle">
-            <p class="font-sf-regular text-[16px] md:text-[18px] text-black">
-              Frontend
-            </p>
-            <span class="relative ml-4 h-4 w-4 shrink-0 transition-transform duration-300 skill-icon rotate-0">
-              <span class="absolute left-0 top-1/2 h-[1px] w-full -translate-y-1/2 bg-black"></span>
-              <span class="absolute top-0 left-1/2 h-full w-[1px] -translate-x-1/2 bg-black"></span>
-            </span>
-          </button>
-          <div class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 skill-content">
-            <div class="overflow-hidden pb-4 font-sf-regular text-[16px] md:text-[18px] leading-6">
-              <p class="mt-8 text-black/60">
-                HTML, CSS, Tailwind CSS, SCSS, Bootstrap CSS, JavaScript,<br>
-                TypeScript, React, Redux, Zustand
-              </p>
-              <p class="mt-5 text-black/60">
-                GSAP Animation, Framer Motion
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="border-b border-white/14 skill-item" data-skill="design">
-          <button class="cursor-hover  w-full flex cursor-pointer items-center justify-between pt-4 text-left skill-toggle">
-            <p class="font-sf-regular text-[16px] md:text-[18px] text-black">
-              Design
-            </p>
-            <span class="relative ml-4 h-4 w-4 shrink-0 transition-transform duration-300 skill-icon rotate-0">
-              <span class="absolute left-0 top-1/2 h-[1px] w-full -translate-y-1/2 bg-black"></span>
-              <span class="absolute top-0 left-1/2 h-full w-[1px] -translate-x-1/2 bg-black"></span>
-            </span>
-          </button>
-          <div class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 skill-content">
-            <div class="overflow-hidden pb-4 font-sf-regular text-[16px] md:text-[18px] leading-6">
-              <p class="mt-8 text-black/60">
-                Figma, Adobe Illustrator, Adobe Photoshop
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="reveal-text mb-40 mt-10 flex flex-col gap-30 border-t py-3 border-black/14 relative">
-      <div class="flex items-center">
-        <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
-        <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
-          Кейсы
-        </p>
-      </div>
-      <div class="overflow-hidden mt-40">
+        <button
+          id="burger"
+          class="relative z-[60] w-12 h-5 flex items-center justify-center md:hidden"
+        >
+          <span class="line line-1 z-1000 bg-white"></span>
+          <span class="line line-2 z-1000 bg-white"></span>
+        </button>
         <div
-          id="cases-track"
-          class="cursor-hover cursor-pointer flex-col xl:flex-row flex gap-5 w-max">
-          <div class="group relative rounded-[4px] w-full md:w-[600px] h-[360px] md:h-[600px] overflow-hidden shrink-0">
-            <a href="">
-              <img src="./img/case1.png" 
-                class="w-full h-full rounded-[4px] object-cover transition-transform duration-500" />
-            </a>
-            <div class="absolute bottom-0 left-0 w-full bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 py-3">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-[24px] text-black">DaedalusAI</p>
-                  <p class="text-[16px] text-black/50">Frontend, UI/UX-design</p>
-                </div>
-                <p class="text-[14px] text-black/40">2025</p>
-              </div>
+          id="mobileMenu"
+          class="fixed inset-0 h-screen bg-black text-white opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"
+        >
+          <div class="flex flex-col h-full px-[18px] py-[18px] justify-between">
+            <div class="flex flex-col gap-4 text-[40px] leading-none">
+              <a
+                href="#about"
+                class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40"
+                >ОБО МНЕ</a
+              >
+              <a
+                href="#skills"
+                class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40"
+                >ОПЫТ</a
+              >
+              <a
+                href="#achievements"
+                class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40"
+                >НАВЫКИ</a
+              >
+              <a
+                href="#cases"
+                class="mobile-link transition-all duration-300 hover:text-white/40 active:text-white/40"
+                >КЕЙСЫ</a
+              >
             </div>
-          </div>
-          <div class="group relative rounded-[4px] w-full md:w-[600px] h-[360px] md:h-[600px] overflow-hidden shrink-0">
-            <img src="./img/case2.png"
-                class="w-full rounded-[4px] h-full object-cover transition-transform duration-500" />
-            <div class="absolute bottom-0 left-0 w-full bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 py-3">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-[24px] text-black">RIVA</p>
-                  <p class="text-[16px] text-black/50">Frontend, UI/UX-design</p>
-                </div>
-                <p class="text-[14px] text-black/40">2026</p>
-              </div>
-            </div>
-          </div>
-          <div class="group relative rounded-[4px] w-full md:w-[600px] h-[360px] md:h-[600px] overflow-hidden shrink-0">
-            <img src="./img/case3.png" 
-                class="w-full rounded-[4px] h-full object-cover transition-transform duration-500" />
-            <div class="absolute bottom-0 left-0 w-full bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 py-3">
-              <div class="flex justify-between items-start">
-                <div>
-                  <p class="text-[24px] text-black">F-rent</p>
-                  <p class="text-[16px] text-black/50">UI/UX-design</p>
-                </div>
-                <p class="text-[14px] text-black/40">2025</p>
-              </div>
+            <div class="flex gap-6 text-[16px]">
+              <a
+                href="https://github.com/ArturDerr"
+                class="text-[16px] underline transition-all duration-200 hover:text-white/40"
+                target="_blank"
+                >GitHub</a
+              >
+              <a
+                href="https://www.behance.net/artur_derr"
+                class="text-[16px] underline transition-all duration-200 hover:text-white/40"
+                target="_blank"
+                >Behance</a
+              >
+              <a
+                href="https://t.me/artur_derr"
+                class="text-[16px] underline transition-all duration-200 hover:text-white/40"
+                target="_blank"
+                >Telegram</a
+              >
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <a href="https://t.me/artur_derr" target="_blank">
-      <div class='group rounded-[4px] cursor-hover w-full h-[80px] xl:h-[122px] flex items-center justify-center bg-none cursor-pointer active:bg-[#141414] hover:bg-[#141414] transition-all duration-200 border border-black text-center'>
-        <p class='text-black font-sf-regular flex justify-center text-center text-[16px] transition-colors duration-200 group-active:text-white group-hover:text-white'>
-          Написать мне
-        </p>
-      </div>
-    </a>
-    <footer class='flex flex-col border-t mt-10 border-black/14 justify-between'>
-      <div class='flex flex-col md:flex-row pt-5 justify-between'>
-        <a class='text-black/40 text-[16px] hidden md:flex text-black font-sf-regular'>© 2026 Artur Derr</a>
-        <div class="flex flex-row justify-between flex md:hidden">
-          <a class='text-black/40 text-[16px] text-black font-sf-regular'>© 2026 Artur Derr</a>
-          <a class='text-black/40 text-[16px] text-black font-sf-regular'>artur12derr@gmail.com</a>
+    </header>
+    <div
+      id=""
+      class="bg-[#141414] h-[400px] lg:h-[475px] w-full relative overflow-hidden"
+    >
+      <div class="relative w-full h-full">
+        <div
+          class="flex justify-between items-end h-full px-4 py-6 xl:px-7 xl:py-8"
+        >
+          <p class="text-white text-[50px] xl:text-[61px] leading-[60px]">
+            Артур Дерр
+          </p>
+          <div class="hidden md:flex flex-col text-end gap-1">
+            <a
+              href="https://github.com/ArturDerr"
+              class="cursor-hover text-[16px] transition-color duration-200 hover:text-white/80 text-white underline"
+              target="_blank"
+              >GitHub</a
+            >
+            <a
+              href="https://www.behance.net/artur_derr"
+              class="cursor-hover text-[16px] transition-color duration-200 hover:text-white/80 text-white underline"
+              target="_blank"
+              >Behance</a
+            >
+            <a
+              href="https://t.me/artur_derr"
+              class="cursor-hover text-[16px] transition-color duration-200 hover:text-white/80 underline text-white"
+              target="_blank"
+              >Telegram</a
+            >
+          </div>
         </div>
-        <div class="flex flex-col justify-between mt-6 gap-1 flex md:hidden">
-          <a href="https://github.com/ArturDerr" class="cursor-hover text-[16px] transition-color duration-200 hover:text-black/80 text-black" target="_blank">GitHub</a>
-          <a href="https://www.behance.net/artur_derr" class="cursor-hover text-[16px] transition-color duration-200 hover:text-black/80 text-black" target="_blank">Behance</a>
-          <a href="https://t.me/artur_derr" class="cursor-hover text-[16px] transition-color duration-200 hover:text-black/80 text-black " target="_blank">Telegram</a>
-        </div>
-        <a href="https://github.com/ArturDerr" class="cursor-hover text-[16px] hidden md:flex transition-color duration-200 hover:text-black/80 text-black" target="_blank">GitHub</a>
-        <a href="https://www.behance.net/artur_derr" class="cursor-hover text-[16px] hidden md:flex transition-color duration-200 hover:text-black/80 text-black" target="_blank">Behance</a>
-        <a href="https://t.me/artur_derr" class="cursor-hover text-[16px] hidden md:flex transition-color duration-200 hover:text-black/80 text-black " target="_blank">Telegram</a>
-        <a href="mailto:artur12derr@gmail.com" class='text-black/40 text-[16px] hidden md:flex text-black font-sf-regular'>artur12derr@gmail.com</a>
       </div>
-    </footer>
-  </div>  
-  <div id="cursor-wrapper" class="hidden xl:flex fixed top-0 left-0 mix-blend-difference pointer-events-none z-[9999]">
-    <div id="cursor" class="w-[24px] h-[24px] rounded-full bg-white mix-blend-difference transition-transform duration-200"></div>
+    </div>
+    <div class="w-full bg-white p-4 xl:p-7">
+      <section
+        id="about"
+        class="reveal-text mt-10 mb-40 flex-col xl:flex-row flex gap-30 border-t py-3 border-black/14 relative"
+      >
+        <div class="shrink-0">
+          <div class="sticky top-[60px]">
+            <div class="flex items-center">
+              <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
+              <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
+                Обо мне
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 mt-20 xl:mt-0 pt-3 xl:pl-[260px] 2xl:pl-[720px]">
+          <div class="flex flex-col gap-14">
+            <img src="./img/img.png" class="w-[44px] h-[44px]" />
+            <div class="flex flex-col gap-8 xl:gap-6">
+              <p
+                class="font-sf-regular text-[21px] md:text-[26px] text-black leading-8"
+              >
+                Привет, я Frontend-разработчик и UI/UX-дизайнер. Создаю
+                современные интерфейсы и веб-приложения, продумываю
+                пользовательский опыт и реализую его в коде.
+              </p>
+              <a
+                href="https://t.me/artur_derr"
+                target="_blank"
+                class="cursor-hover text-[16px] underline cursor-pointer transition-color duration-200 hover:text-black/80 text-black"
+              >
+                Написать мне
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="reveal-text mt-10 mb-40 flex-col xl:flex-row flex gap-30 border-t py-3 border-black/14 relative"
+        id="experience"
+      >
+        <div class="shrink-0 mr-5">
+          <div class="sticky top-[60px]">
+            <div class="flex items-center">
+              <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
+              <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
+                Опыт
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 mt-0 xl:mt-0 xl:pl-[260px] 2xl:pl-[720px]">
+          <div class="mt-[60px] md:mt-3 left-auto flex-1">
+            <div class="flex-col md:flex-row flex justify-between gap-auto">
+              <p
+                class="font-sf-regular text-[24px] md:text-[26px] mr-auto text-black leading-8"
+              >
+                Т-Академия
+              </p>
+              <p
+                class="font-sf-regular text-[16px] mt-6 md:mt-0 md:text-[18px] ml-auto text-black leading-6"
+              >
+                Сейчас обучаюсь в Т-Академии на frontend-разработчика,<br
+                  class="hidden md:flex"
+                />
+                углубляю знания в веб-разработке и интерфейсах.
+              </p>
+            </div>
+            <div class="border-b mt-20 w-full border-black/14">
+              <p class="font-sf-regular w-full text-[14px] mb-3 text-black/40">
+                /достижения
+              </p>
+            </div>
+            <div class="flex flex-row justify-between gap-auto w-full py-4">
+              <p
+                class="font-sf-regular text-[16px] md:text-[18px] text-black leading-6"
+              >
+                Всероссийский кейс-чемпионат Deadline
+              </p>
+              <p
+                class="font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6"
+              >
+                Призер
+              </p>
+            </div>
+            <div
+              class="border-t flex flex-row justify-between gap-auto w-full border-black/14 py-4"
+            >
+              <p
+                class="font-sf-regular text-[16px] md:text-[18px] text-black leading-6"
+              >
+                Всероссийский хакатон TerraLink CodeFest
+              </p>
+              <p
+                class="font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6"
+              >
+                Победитель
+              </p>
+            </div>
+            <div
+              class="border-t flex flex-row justify-between gap-auto w-full border-black/14 py-4"
+            >
+              <p
+                class="font-sf-regular text-[16px] md:text-[18px] text-black leading-6"
+              >
+                Всероссийский хакатон Hack iN Home
+              </p>
+              <p
+                class="font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6"
+              >
+                Победитель
+              </p>
+            </div>
+            <div
+              class="border-t flex flex-row justify-between gap-auto w-full border-black/14 py-4"
+            >
+              <p
+                class="font-sf-regular text-[16px] md:text-[18px] text-black leading-6"
+              >
+                Акселератор технологических проектов Технолидеры Будущего
+              </p>
+              <p
+                class="font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6"
+              >
+                Призер
+              </p>
+            </div>
+            <div
+              class="border-y flex flex-row justify-between gap-auto w-full border-black/14 py-4"
+            >
+              <p
+                class="font-sf-regular text-[16px] md:text-[18px] text-black leading-6"
+              >
+                Всероссийский хакатон The Genius Hack
+              </p>
+              <p
+                class="font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6"
+              >
+                Эксперт
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="reveal-text mt-10 mb-40 flex-col md:flex-row flex gap-30 md:gap-[100px] xl:gap-[0px] border-t py-3 border-black/14 relative"
+        id="education"
+      >
+        <div class="shrink-0 mr-5">
+          <div class="sticky top-[60px]">
+            <div class="flex items-center">
+              <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
+              <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
+                Образование
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 mt-0 xl:mt-0 xl:pl-[190px] 2xl:pl-[660px]">
+          <div class="mt-[30px] md:mt-[-10px] left-auto flex-1">
+            <div
+              class="border-b flex flex-row justify-between gap-auto w-full border-black/14 py-4"
+            >
+              <p
+                class="font-sf-regular text-[16px] md:text-[18px] text-black leading-6"
+              >
+                МАИ
+              </p>
+              <p
+                class="font-sf-regular text-[16px] ml-8 md:ml-0 md:text-[18px] text-black/40 leading-6"
+              >
+                Информатика и вычислительная техника (09.03.01)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="skills"
+        class="reveal-text mt-10 mb-40 flex-col md:flex-row flex gap-30 md:gap-[135px] xl:gap-[0px] border-t py-3 border-black/14 relative"
+      >
+        <div class="shrink-0 mr-5">
+          <div class="sticky top-[60px]">
+            <div class="flex items-center">
+              <img src="./img/rec.svg" class="w-[7px] h-[7px]" />
+              <p class="font-sf-regular text-[16px] px-[8px] text-black/40">
+                Навыки
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 mt-20 md:mt-0 xl:mt-0 xl:pl-[260px] 2xl:pl-[700px]">
+          <div
+            class="border-b border-white/14 skill-item"
+            data-skill="frontend"
+          >
+            <button
+              class="cursor-hover w-full flex cursor-pointer items-center justify-between pt-1.5 text-left skill-toggle"
+            >
+              <p class="font-sf-regular text-[16px] md:text-[18px] text-black">
+                Frontend
+              </p>
+              <span
+                class="relative ml-4 h-4 w-4 shrink-0 transition-transform duration-300 skill-icon rotate-0"
+              >
+                <span
+                  class="absolute left-0 top-1/2 h-[1px] w-full -translate-y-1/2 bg-black"
+                ></span>
+                <span
+                  class="absolute top-0 left-1/2 h-full w-[1px] -translate-x-1/2 bg-black"
+                ></span>
+              </span>
+            </button>
+            <div
+              class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 skill-content"
+            >
+              <div
+                class="overflow-hidden pb-4 font-sf-regular text-[16px] md:text-[18px] leading-6"
+              >
+                <p class="mt-8 text-black/60">
+                  HTML, CSS, Tailwind CSS, SCSS, Bootstrap CSS, JavaScript,<br />
+                  TypeScript, React, Redux, Zustand
+                </p>
+                <p class="mt-5 text-black/60">GSAP Animation, Framer Motion</p>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-white/14 skill-item" data-skill="design">
+            <button
+              class="cursor-hover w-full flex cursor-pointer items-center justify-between pt-4 text-left skill-toggle"
+            >
+              <p class="font-sf-regular text-[16px] md:text-[18px] text-black">
+                Design
+              </p>
+              <span
+                class="relative ml-4 h-4 w-4 shrink-0 transition-transform duration-300 skill-icon rotate-0"
+              >
+                <span
+                  class="absolute left-0 top-1/2 h-[1px] w-full -translate-y-1/2 bg-black"
+                ></span>
+                <span
+                  class="absolute top-0 left-1/2 h-full w-[1px] -translate-x-1/2 bg-black"
+                ></span>
+              </span>
+            </button>
+            <div
+              class="grid transition-all duration-300 ease-in-out grid-rows-[0fr] opacity-0 skill-content"
+            >
+              <div
+                class="overflow-hidden pb-4 font-sf-regular text-[16px] md:text-[18px] leading-6"
+              >
+                <p class="mt-8 text-black/60">
+                  Figma, Adobe Illustrator, Adobe Photoshop
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <a href="https://t.me/artur_derr" target="_blank">
+        <div
+          class="group rounded-[4px] cursor-hover w-full h-[80px] xl:h-[122px] flex items-center justify-center bg-none cursor-pointer active:bg-[#141414] hover:bg-[#141414] transition-all duration-200 border border-black text-center"
+        >
+          <p
+            class="text-black font-sf-regular flex justify-center text-center text-[16px] transition-colors duration-200 group-active:text-white group-hover:text-white"
+          >
+            Написать мне
+          </p>
+        </div>
+      </a>
+      <footer
+        class="flex flex-col border-t mt-10 border-black/14 justify-between"
+      >
+        <div class="flex flex-col md:flex-row pt-5 justify-between">
+          <a
+            class="text-black/40 text-[16px] hidden md:flex text-black font-sf-regular"
+            >© 2026 Artur Derr</a
+          >
+          <div class="flex flex-row justify-between flex md:hidden">
+            <a class="text-black/40 text-[16px] text-black font-sf-regular"
+              >© 2026 Artur Derr</a
+            >
+            <a class="text-black/40 text-[16px] text-black font-sf-regular"
+              >artur12derr@gmail.com</a
+            >
+          </div>
+          <div class="flex flex-col justify-between mt-6 gap-1 flex md:hidden">
+            <a
+              href="https://github.com/ArturDerr"
+              class="cursor-hover text-[16px] transition-color duration-200 hover:text-black/80 text-black"
+              target="_blank"
+              >GitHub</a
+            >
+            <a
+              href="https://www.behance.net/artur_derr"
+              class="cursor-hover text-[16px] transition-color duration-200 hover:text-black/80 text-black"
+              target="_blank"
+              >Behance</a
+            >
+            <a
+              href="https://t.me/artur_derr"
+              class="cursor-hover text-[16px] transition-color duration-200 hover:text-black/80 text-black"
+              target="_blank"
+              >Telegram</a
+            >
+          </div>
+          <a
+            href="https://github.com/ArturDerr"
+            class="cursor-hover text-[16px] hidden md:flex transition-color duration-200 hover:text-black/80 text-black"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.behance.net/artur_derr"
+            class="cursor-hover text-[16px] hidden md:flex transition-color duration-200 hover:text-black/80 text-black"
+            target="_blank"
+            >Behance</a
+          >
+          <a
+            href="https://t.me/artur_derr"
+            class="cursor-hover text-[16px] hidden md:flex transition-color duration-200 hover:text-black/80 text-black"
+            target="_blank"
+            >Telegram</a
+          >
+          <a
+            href="mailto:artur12derr@gmail.com"
+            class="text-black/40 text-[16px] hidden md:flex text-black font-sf-regular"
+            >artur12derr@gmail.com</a
+          >
+        </div>
+      </footer>
+    </div>
+    <div
+      id="cursor-wrapper"
+      class="hidden xl:flex fixed top-0 left-0 mix-blend-difference pointer-events-none z-[9999]"
+    >
+      <div
+        id="cursor"
+        class="w-[24px] h-[24px] rounded-full bg-white mix-blend-difference transition-transform duration-200"
+      ></div>
+    </div>
+  </body>
+  <div id="preloader" class="fixed inset-0 bg-white z-[9999] overflow-hidden">
+    <div
+      class="absolute right-3 md:right-10 top-3 bottom-0 h-full flex items-end"
+    >
+      <p
+        id="progress"
+        class="font-sf-regular text-[70px] md:text-[120px] font-sf-regular leading-none"
+      >
+        0%
+      </p>
+    </div>
   </div>
-</body>
-<div id="preloader" class="fixed inset-0 bg-white z-[9999] overflow-hidden">
-  <div class="absolute right-3 md:right-10 top-3 bottom-0 h-full flex items-end">
-    <p id="progress" class="font-sf-regular text-[70px] md:text-[120px] font-bold leading-none">
-      0%
-    </p>
-  </div>
-</div>
 </html>
