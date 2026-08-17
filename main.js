@@ -285,6 +285,7 @@ function handleHeader() {
   headerLastScroll = current;
   requestAnimationFrame(handleHeader);
 }
+
 handleHeader();
 
 const revealItems = document.querySelectorAll(".reveal-text, .reveal-fade");
