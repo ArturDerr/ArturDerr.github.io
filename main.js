@@ -302,3 +302,5 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((el) => revealObserver.observe(el));
+
+
